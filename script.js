@@ -1,6 +1,7 @@
 const gridContainer = document.querySelector("#grid-container");
 const submitButton = document.querySelector("#submit-button");
 const inputField = document.querySelector("#input");
+const clearButton = document.querySelector("#clear-button");
 
 function createGrid(squaresNumber) {
     gridContainer.innerHTML = "";
@@ -28,13 +29,19 @@ function createGrid(squaresNumber) {
 
 function setSquaresNumber() {
     const squaresNumber = parseInt(inputField.value);
-    if (squaresNumber > 0 && squaresNumber < 100) {
+    if (squaresNumber > 1 && squaresNumber < 64) {
         return createGrid(squaresNumber);
     } else {
-        alert("ENTER A VALID NUMBER");
+        alert("ENTER A NUMBER BETWEEN 2-64");
     }
 };
 
+function clearGrid() {
+    createGrid(16);
+    inputField.value = "";
+};
+
 submitButton.addEventListener("click", setSquaresNumber);
+clearButton.addEventListener("click", clearGrid);
 
 createGrid(16);

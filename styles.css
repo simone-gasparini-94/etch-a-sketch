@@ -31,6 +31,9 @@ input {
 }
 #input-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 8px;
+}
+#top-container {
+    display: flex;
+    gap: 80px;
 }
