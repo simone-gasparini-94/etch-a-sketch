@@ -8,4 +8,8 @@ function createGrid() {
     };
 };
 
+function darkenGrid() {
+    
+}
+
 createGrid();
